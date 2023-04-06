@@ -1,14 +1,18 @@
-
-public abstract class Language {
+import java.util.Random;
+public class Language {
 	private String name;
-	private String[] unitsArray;
+	private Unit[] unitsArray;
 	private String[] leagueArray;
-		
-    public Language(String name, String[] unitsArray, String[] leagueArray) {
+	private int unitNumber;
+
+    public Language(String name ) {// only name needed when generating this class.
     	this.name = name;
-        this.unitsArray = unitsArray;
-        this.leagueArray = leagueArray;
+    	createUnits();
+        
     }
+    public int getUnitNumber() {
+		return unitNumber;
+	}
 	
 	public String getName() {
 		return name;
@@ -26,12 +30,22 @@ public abstract class Language {
 		this.leagueArray = leagueArray;
 	}
 
-	public String[] getUnitsArray() {
+	public Unit[] getUnitsArray() {
 		return unitsArray;
 	}
+	
+	public void createUnits() {
+		Random rand = new Random();
+        int numUnits = rand.nextInt(41) + 60; // generates a random number between 60 and 100
+        this.unitNumber = numUnits;
+        
+        for(int i= 0; i < numUnits ; i ++) {
+        	System.out.println('1');
+        	Unit unit = new Unit();
+        	
+        	this.unitsArray[i] = unit;
+        }
 
-	public void setUnitsArray(String[] unitsArray) {
-		this.unitsArray = unitsArray;
 	}
 	
 }
