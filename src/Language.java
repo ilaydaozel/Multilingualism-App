@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Random;
 public class Language {
 	private String name;
@@ -11,8 +10,7 @@ public class Language {
     	Random rand = new Random();
     	unitNumber = rand.nextInt(41) + 60; // generates a random number between 60 and 100
     	unitsArray = new Unit[unitNumber];
-    	createUnits();
-        
+    	createUnits();      
     }
     public int getUnitNumber() {
 		return unitNumber;
@@ -38,11 +36,8 @@ public class Language {
 		return unitsArray;
 	}
 	
-	public void createUnits() {
-		
-        
+	public void createUnits() {       
         for(int i= 0; i < unitNumber ; i ++) {
-        	System.out.println("create Units" + i);
         	Unit unit = new Unit();
         	unitsArray[i] = unit;
         }
