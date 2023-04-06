@@ -11,6 +11,6 @@ public class Multilingualism {
     	
     	Spanish spanish = new Spanish("spanish");
     	Unit[] units =  spanish.getUnitsArray();
-        System.out.println(units);
+        System.out.println("units" + units);
     }	
 }

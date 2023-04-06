@@ -10,10 +10,8 @@ public class ListeningQuestion extends Question{
 		
 		listeningContent[0] = getRandomInt();
 		listeningContent[1] = getRandomInt();
-		System.out.println(listeningContent[0]);
+		System.out.println("rand len of list q " + listeningContent[0]);
 		setContent(listeningContent);
-		
-		//setCon
 	}
 	
 	public int getRandomInt() {

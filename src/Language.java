@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Random;
 public class Language {
 	private String name;
@@ -7,6 +8,9 @@ public class Language {
 
     public Language(String name ) {// only name needed when generating this class.
     	this.name = name;
+    	Random rand = new Random();
+    	unitNumber = rand.nextInt(41) + 60; // generates a random number between 60 and 100
+    	unitsArray = new Unit[unitNumber];
     	createUnits();
         
     }
@@ -35,15 +39,12 @@ public class Language {
 	}
 	
 	public void createUnits() {
-		Random rand = new Random();
-        int numUnits = rand.nextInt(41) + 60; // generates a random number between 60 and 100
-        this.unitNumber = numUnits;
+		
         
-        for(int i= 0; i < numUnits ; i ++) {
-        	System.out.println('1');
+        for(int i= 0; i < unitNumber ; i ++) {
+        	System.out.println("create Units" + i);
         	Unit unit = new Unit();
-        	
-        	this.unitsArray[i] = unit;
+        	unitsArray[i] = unit;
         }
 
 	}
