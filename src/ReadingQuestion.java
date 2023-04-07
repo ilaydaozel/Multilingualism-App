@@ -1,7 +1,16 @@
 
 public class ReadingQuestion extends Question{
-	public ReadingQuestion() {
-		super(7, "a");
+	
+	public ReadingQuestion(String languageName) {
+		super(10, createReadingContent(languageName), languageName );
 	}
 	
+	
+	public static Object[] createReadingContent(String languageName) {
+		Object[] readingContent = new StringContent[2];
+		readingContent[0] = new StringContent(languageName);
+		readingContent[1] = new StringContent("English");
+		return readingContent;
+	}
+		
 }
